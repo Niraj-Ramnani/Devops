@@ -7,7 +7,7 @@
 
 ## 🔹 Steps to Enable SSH Login on RHEL Instances in AWS  
 
-```bash
+
 # ✅ 1. Configure Security Group to Allow ICMP and SSH  
 
 # Open AWS Console → Navigate to EC2  
@@ -26,19 +26,26 @@
 # ✅ 2. Switch to Root User & Set Password  
 
 # Login to your EC2 instance  
-ssh -i your-key.pem ec2-user@<instance-private-ip>  
-
+```
+ssh -i your-key.pem ec2-user@<instance-private-ip> 
+``` 
 # Switch to root user  
+```
 sudo -i  
+```
 
 # Set a password for root  
+```
 passwd  
+```
 # Enter and confirm the new root password  
 
 # ✅ 3. Enable Password Authentication & Permit Root Login  
 
 # Open the SSH configuration file  
+```
 vim /etc/ssh/sshd_config  
+```
 
 # Update or add the following parameters:  
 PasswordAuthentication yes  
