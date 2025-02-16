@@ -36,7 +36,7 @@ passwd
 ```
  Enter and confirm the new root password  
 
-# #✅ 3. Enable Password Authentication & Permit Root Login  
+## ✅ 3. Enable Password Authentication & Permit Root Login  
 
 ### Open the SSH configuration file  
 ```
@@ -77,6 +77,9 @@ ssh root@test2
 ```
 ssh root@<private-ip-of-test2>  
 ```
+
+---
+
 ## 🎯 Conclusion  
 By following these steps, you have successfully configured SSH login on your RHEL instance in AWS. This setup allows password-based SSH login for root while ensuring connectivity using private IPs in a multi-instance AWS environment.
 
