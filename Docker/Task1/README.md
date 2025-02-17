@@ -1,0 +1,2 @@
+## Task 
+ create a Docker image using a Dockerfile with CentOS as the base image, install HTTPD on it, configure it to listen on port 8080, create an index.html file on the host server, copy it into the container, change the working directory accordingly, and expose the necessary port for access?
