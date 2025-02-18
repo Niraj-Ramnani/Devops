@@ -1,0 +1,26 @@
+version: '3.1'  
+
+services:
+  database:
+    image: mariadb:latest
+    environment:
+      MARIADB_ROOT_PASSWORD: "redhat"
+      MARIADB_DATABASE: "wordpress"
+    volumes:
+      - db:/var/lib/mysql
+
+  wordpress:
+    image: wordpress
+    ports:
+      - "80:80"
+    environment:
+      WORDPRESS_DB_HOST: "database"
+      WORDPRESS_DB_USER: "root"
+      WORDPRESS_DB_PASSWORD: "redhat"
+      WORDPRESS_DB_NAME: "wordpress"
+    volumes:
+      - wp:/var/www/html
+
+volumes:
+  db:
+  wp:
